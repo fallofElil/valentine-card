@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Коте</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: #ffe6e6;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        main {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .heart {
+            animation: heartbeat 1s infinite;
+
+            background-color: red;
+            display: inline-block;
+            height: 50px;
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            position: relative;
+            top: 0;
+            transform: rotate(-45deg);
+            width: 50px;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            background-color: red;
+            border-radius: 50%;
+            height: 50px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .heart:before {
+          top: -25px;
+          left: 0;
+        }
+
+        .heart:after {
+          left: 25px;
+          top: 0;
+        }
+
+        .celebration {
+            text-align: center;
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        .emoji {
+            font-style: normal;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale( 1 ) 
+                    rotate(-45deg);    
+            }
+
+            20% {
+              transform: scale( 1.25 ) 
+                rotate(-45deg)
+                translateX(5%) 
+                translateY(5%);
+            }
+
+            40% {
+              transform: scale( 1.5 ) 
+                rotate(-45deg)
+                translateX(9%) 
+                translateY(10%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="wrapper">
+            <div class="heart"></div>
+            <p class="celebration">
+                С днём святого Валентина тебя, котя! <span class="emoji" role="image" aria-label="grinning cat with smiling eyes
+                ">&#x1F638</span> <br>
+                Люблю тебя! 
+                <span class="emoji" role="image" aria-label="heart with arrow">&#x1F498</span>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
